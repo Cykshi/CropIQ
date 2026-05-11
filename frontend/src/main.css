@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, system-ui, sans-serif;
+  background-color: #0f172a;
+  overflow: hidden;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
+.leaflet-top.leaflet-left {
+  display: none !important;
+}
+/* =========================
+   HEAT MAP ENHANCEMENT
+========================= */
+/* src/index.css */
+
+/* =========================
+   RAIN MAP
+========================= */
+
+.rain-layer {
+  filter:
+    contrast(3)
+    saturate(4)
+    brightness(1.2)
+    hue-rotate(-15deg);
+
+  mix-blend-mode: screen;
+}
+
+/* =========================
+   HEAT MAP
+========================= */
+
+.heat-layer {
+  filter:
+    contrast(3)
+    saturate(4)
+    brightness(1.2)
+    hue-rotate(-20deg);
+
+  mix-blend-mode: screen;
+}
+
+/* =========================
+   AQI MAP
+========================= */
+
+.aqi-layer {
+  filter:
+    contrast(3.2)
+    saturate(4)
+    brightness(1.15)
+    hue-rotate(10deg);
+
+  mix-blend-mode: screen;
+}
+
+/* src/index.css */
+
+/* ====================================
+   LEAFLET TILE ENHANCEMENT
+==================================== */
+
+.leaflet-tile {
+  image-rendering: auto;
+
+  filter:
+    contrast(1.5)
+    saturate(1.8)
+    brightness(1.08);
+}
